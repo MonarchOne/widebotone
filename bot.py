@@ -3,7 +3,7 @@ from telebot import types
 import config
 import markups as m
 
-bot = telebot.TeleBot()
+bot = telebot.TeleBot(config.token)
 
 
 @bot.message_handler(commands=['start', 'help'])
