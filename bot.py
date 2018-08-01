@@ -28,7 +28,7 @@ def text_handler(message):
 def back_handler(message):
     text = message.text.lower()
     chat_id = message.chat.id
-    if text == "назад":
+    if text == "Назад":
         bot.send_message(chat_id, 'Выберите нужную категорию:', reply_markup=m.markup_cat)
 
 bot.polling(none_stop=True)
