@@ -6,7 +6,7 @@ import markups as m
 bot = telebot.TeleBot(config.token)
 
 
-@bot.message_handler(commands=['start', 'help'])
+@bot.message_handler(commands=['start', 'help', 'back'])
 def any_msg(message):
     markup = types.ReplyKeyboardMarkup()
     markup.row('📗Курсы', '⭐️Схемы', '📰 Лента')
@@ -27,8 +27,7 @@ def text_handler(message):
 @bot.message_handler(content_types=['text'])
 def back_handler(message):
     text = message.text.lower()
-    chat_id = message.chat.id
-    if text == "Назад":
+    if text == "назад":
         bot.send_message(chat_id, 'Выберите нужную категорию:', reply_markup=m.markup_cat)
 
 bot.polling(none_stop=True)
