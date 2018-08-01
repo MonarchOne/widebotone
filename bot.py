@@ -28,7 +28,7 @@ def text_handler(message):
 def back_handler(message):
     text = message.text.lower()
     chat_id = message.chat.id
-    if text == "📗курсы":
+    if text == "назад":
         markup = types.ReplyKeyboardMarkup()
         markup.row('📗Курсы', '⭐️Схемы', '📰 Лента')
         markup.row('🔔Популярное', '💰Подписка', '👫Партнерство')
