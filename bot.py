@@ -20,7 +20,7 @@ def any_msg(message):
 def text_handler(message):
     text = message.text.lower()
     chat_id = message.chat.id
-    if text == "📗статьи":
+    if text == "📗курсы":
         bot.send_message(chat_id, 'Выберите нужную категорию:', reply_markup=m.markup_cat)
 
 bot.polling(none_stop=True)
